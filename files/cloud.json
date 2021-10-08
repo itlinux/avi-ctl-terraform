@@ -1,0 +1,43 @@
+{
+   "apic_mode": false,
+   "autoscale_polling_interval": 60,
+   "aws_configuration": {
+      "access_key_id": "<sensitive>",
+      "asg_poll_interval": 600,
+      "ebs_encryption": {
+         "mode": "AWS_ENCRYPTION_MODE_NONE"
+      },
+      "free_elasticips": true,
+      "publish_vip_to_public_zone": false,
+      "region": "us-west-1",
+      "route53_integration": false,
+      "s3_encryption": {
+         "mode": "AWS_ENCRYPTION_MODE_NONE"
+      },
+      "secret_access_key": "<sensitive>",
+      "ttl": 60,
+      "use_iam_roles": false,
+      "use_sns_sqs": false,
+      "vpc": "vpc-abacfecf",
+      "vpc_id": "vpc-abacfecf",
+      "zones": [
+         {
+            "availability_zone": "us-west-1a",
+            "mgmt_network_name": "remo",
+            "mgmt_network_uuid": "subnet-0b00173f148d40bf3"
+         }
+      ]
+   },
+   "dhcp_enabled": true,
+   "enable_vip_static_routes": false,
+   "ip6_autocfg_enabled": false,
+   "license_tier": "ENTERPRISE_18",
+   "license_type": "LIC_CORES",
+   "mtu": 1500,
+   "name": "AWS",
+   "prefer_static_routes": false,
+   "state_based_dns_registration": true,
+   "tenant_ref": "https://localhost/api/tenant/admin",
+   "uuid": "cloud-644cab8b-ebbb-47f9-b22f-f6bb38cff151",
+   "vtype": "CLOUD_AWS"
+}
