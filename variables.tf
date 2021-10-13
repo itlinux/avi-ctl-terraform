@@ -54,3 +54,7 @@ variable "ami-image" {
     #us-west-2 = "ami-17ba2e6f"
    }
   }
+
+  variable "controller_count" {
+    default = 3
+  }

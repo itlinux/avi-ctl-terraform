@@ -1,5 +1,6 @@
 {
 "SystemConfiguration": [{
+	"welcome_workflow_complete": true,
 	"dns_configuration": {
 		"search_domain": "",
 		"server_list": [{
@@ -57,5 +58,14 @@
 	"local": true,
 	"email": "",
 	"default_tenant_ref": "/api/tenant/?name=admin"
-}]
+}],
+ "BackupConfiguration": [
+    {
+       "name": "Backup-Configuration",
+       "tenant_ref": "/api/tenant/?name=admin",
+       "save_local": true,
+       "backup_passphrase":  "${password}",
+       "maximum_backups_stored": 4
+    }
+  ]
  }
