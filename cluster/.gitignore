@@ -1,0 +1,3 @@
+terraform.auto.tfvars.json
+terraform.tfvars
+.terraform.lock.hcl

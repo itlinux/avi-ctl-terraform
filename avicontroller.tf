@@ -23,7 +23,7 @@ resource "aws_instance" "remo-avi-controller" {
       aws_security_group.remo_sg.id,
   ]
   tags                        = {
-    Name                      = var.controller_name
+    Name                      = "ctl-avi-rm-${count.index +1}"
     dept                      = var.department_name
     shutdown_policy           = var.shutdown_rules
     owner                     = var.owner
@@ -60,3 +60,28 @@ provider "avi" {
 #   password     = var.admin_password
 # }
 
+# resource "avi_cluster" "aws_cluster" {
+#   depends_on = [aws_instance.remo-avi-controller]
+#   name       =  "cluster1-rm"
+#   nodes {
+#     ip {
+#       type = "V4"
+#       addr = aws_instance.remo-avi-controller[0].private_ip
+#     }
+#     name = "node01"
+#   }
+#   nodes {
+#     ip {
+#       type = "V4"
+#       addr = aws_instance.remo-avi-controller[1].private_ip
+#     }
+#     name = "node02"
+#   }
+#   nodes {
+#     ip {
+#       type = "V4"
+#       addr = aws_instance.remo-avi-controller[2].private_ip
+#     }
+#     name = "node03"
+#   }
+# }
