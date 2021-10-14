@@ -66,4 +66,4 @@ ssh -i keys/generated-access-key-moccasin.pem admin@134.212.234.145
 == Video overview
 this video is the original deployment I will have to update it.
 
-* http://tiny.cc/avi-terraform
+* http://tiny.cc/avicontroller_aws
