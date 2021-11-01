@@ -1,9 +1,9 @@
-# terraform {
-#   backend "remote" {
-#     organization = "remo"
+terraform {
+  backend "remote" {
+    organization = "remo"
 
-#     workspaces {
-#       name = "avi-ctl"
-#     }
-#   }
-# }
+    workspaces {
+      name = "avi-ctl"
+    }
+  }
+}
