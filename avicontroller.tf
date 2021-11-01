@@ -1,9 +1,26 @@
+data "http" "avi_data" {
+  url = "https://raw.githubusercontent.com/itlinux/avi-ctl-terraform/master/files/userdata.json"
+  #url = "https://github.com/path/to/userdata.json"
+
+  request_headers = {
+    Accept = "application/json"
+  }
+}
+
 data "template_file" "userdata" {
-  template = file("files/userdata.json")
+  template = data.http.avi_data.body
   vars = {
     password = var.admin_password
   }
 }
+
+#data "template_file" "userdata" {
+#  template = file("./files/userdata.json")
+#  #template = "https://raw.githubusercontent.com/itlinux/avi-ctl-terraform/master/files/userdata.json"
+#  vars = {
+#    password = var.admin_password
+#  }
+#}
 # data "template_file" "cloud" {
 #   template   = "${file("files/cloud.json")}"
 #   vars       = {
