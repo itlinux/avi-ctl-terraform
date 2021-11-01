@@ -56,5 +56,5 @@ variable "ami-image" {
   }
 
   variable "controller_count" {
-    default = 1
+    default = 2
   }
