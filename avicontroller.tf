@@ -1,6 +1,6 @@
 data "http" "avi_data" {
-  url = "https://raw.githubusercontent.com/itlinux/avi-ctl-terraform/master/files/userdata.json"
-  #url = "https://github.com/path/to/userdata.json"
+  url = var.git_raw_url
+  #url = "https://raw.githubusercontent.com/itlinux/avi-ctl-terraform/master/files/userdata.json"
 
   request_headers = {
     Accept = "application/json"

@@ -57,3 +57,7 @@ variable "ami-image" {
 
   variable "controller_count" {
   }
+
+  variable "git_raw_url" {
+  description = "The raw URL from the git which contains the json data"
+  }
